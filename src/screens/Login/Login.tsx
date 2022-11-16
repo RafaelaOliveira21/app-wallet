@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ButtonSocialGoogle } from '@components/ButtonSocialGoogle/ButtonSocialGoogle';
 import { ButtonSocialFacebook } from '@components/ButtonSocialFacebook/ButtonSocialFacebook';
+import { Input } from '@components/Input/Input';
 import {
   Container,
   ContentHeader,
@@ -25,12 +26,10 @@ const Login: React.FC = () => {
           </ViewButton>
         </ContentHeader>
         <ContentBody>
-
+          <Input />
         </ContentBody>
 
-        <ContentFooter>
-
-        </ContentFooter>
+        <ContentFooter></ContentFooter>
       </Container>
     </SafeAreaView>
   );

@@ -23,5 +23,5 @@ export const IconeGoogle = styled.Image`
 export const Title = styled.Text`
   font-size: ${RFValue(15)}px;
   margin-left: ${RFValue(10)}px;
-  font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT}
-  `;
+  font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
+`;

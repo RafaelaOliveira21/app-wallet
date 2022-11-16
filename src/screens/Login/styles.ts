@@ -32,4 +32,3 @@ export const Description = styled.Text`
   margin-bottom: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
 `;
-
