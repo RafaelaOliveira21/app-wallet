@@ -27,18 +27,14 @@ export const IConContainer = styled.View<IContainerProps>`
   justify-content: center;
   align-items: center;
 
-  ${({ isFocused, isFilled }) =>
-    (isFocused || isFilled) &&
-    css`
-      border-bottom-width: ${RFValue(2)}px;
-      border-bottom-color: ${({ theme }) => theme.COLORS.BLUE1};
-    `};
+  ${({ isFocused, isFilled }) => (isFocused || isFilled) && css`
+    border-bottom-width: ${RFValue(2)}px;
+    border-bottom-color: ${({ theme }) => theme.COLORS.BLUE1};
+  `};
 
-  ${({ hasError }) =>
-    hasError &&
-    css`
-      border-bottom-color: ${({ theme }) => theme.COLORS.RED1};
-    `};
+  ${({ hasError }) => hasError && css`
+    border-bottom-color: ${({ theme }) => theme.COLORS.RED1};
+  `};
 
   margin-right: ${RFValue(3)}px;
   border-top-left-radius: ${RFValue(5)}px;
@@ -51,22 +47,18 @@ export const InputText = styled(TextInput)<ITextContainerProps>`
   font-size: ${RFValue(12)}px;
   border-top-right-radius: ${RFValue(5)}px;
   border-bottom-right-radius: ${RFValue(5)}px;
-  color: ${({ theme }) => theme.COLORS.GRAY4};
+  color: ${({ theme }) => theme.COLORS.GRAY2};
   font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
   background-color: ${({ theme }) => theme.COLORS.GRAY5};
 
-  ${({ isFocused, isFilled }) =>
-    (isFocused || isFilled) &&
-    css`
-      border-bottom-width: ${RFValue(2)}px;
-      border-bottom-color: ${({ theme }) => theme.COLORS.BLUE1};
-    `};
+  ${({ isFocused, isFilled }) => (isFocused || isFilled) && css`
+    border-bottom-width: ${RFValue(2)}px;
+    border-bottom-color: ${({ theme }) => theme.COLORS.BLUE1};
+  `};
 
-  ${({ hasError }) =>
-    hasError &&
-    css`
-      border-bottom-color: ${({ theme }) => theme.COLORS.RED1};
-    `};
+  ${({ hasError }) => hasError && css`
+    border-bottom-color: ${({ theme }) => theme.COLORS.RED1};
+  `};
 
   padding: 0 ${RFValue(10)}px;
 `;

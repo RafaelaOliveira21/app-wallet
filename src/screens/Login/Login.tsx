@@ -26,7 +26,11 @@ const Login: React.FC = () => {
           </ViewButton>
         </ContentHeader>
         <ContentBody>
-          <Input />
+          <Input
+            name="email"
+            iconName="mail-outline"
+            placeholder="Seu e-mail"
+          />
         </ContentBody>
 
         <ContentFooter></ContentFooter>
