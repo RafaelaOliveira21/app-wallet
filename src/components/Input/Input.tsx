@@ -19,6 +19,11 @@ interface InputValueReference extends TextInputProps {
   value: string;
 }
 
+interface InputProps extends TextInputProps {
+  name: string;
+  icon: string;
+}
+
 const Input: React.FC = () => {
   return (
     <Container>
