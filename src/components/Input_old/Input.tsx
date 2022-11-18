@@ -23,30 +23,21 @@ interface InputValueReference {
 interface InputProps extends TextInputProps {
   name: string;
   value?: string;
-  iconName?: React.ComponentProps<typeof Ionicons>["name"];
+  iconName?: React.ComponentProps<typeof Ionicons>['name'];
   containerStyle?: { [key: string]: string | number };
 }
 
-const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = ({
-  iconName,
-  name,
-  value,
-  containerStyle,
-  ...rest
-}, ref) => {
-
+const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
+  { iconName, name, value, containerStyle, ...rest },
+  ref
+) => {
   const theme = useTheme();
 
   const [hasError, setHasError] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
 
-  const {
-    registerField,
-    defaultValue = '',
-    fieldName,
-    error,
-  } = useField(name);
+  const { registerField, defaultValue = '', fieldName, error } = useField(name);
 
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
@@ -98,7 +89,11 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = ({
         <Ionicons
           name={iconName}
           size={25}
-          color={isFocused || hasError || isFilled ? theme.COLORS.BLUE1 : theme.COLORS.GRAY1}
+          color={
+            isFocused || hasError || isFilled
+              ? theme.COLORS.BLUE1
+              : theme.COLORS.GRAY1
+          }
         />
       </IConContainer>
 

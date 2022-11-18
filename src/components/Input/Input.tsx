@@ -12,7 +12,14 @@ interface InputProps {
   iconColor?: string;
 }
 
-const Input: React.FC<InputProps & TextInputProps> = ({ rightIcon, leftIcon, iconName, iconSize, iconColor, ...rest }) => {
+const Input: React.FC<InputProps & TextInputProps> = ({
+  rightIcon,
+  leftIcon,
+  iconName,
+  iconSize,
+  iconColor,
+  ...rest
+}) => {
   const { COLORS } = useTheme();
 
   return (
@@ -25,10 +32,7 @@ const Input: React.FC<InputProps & TextInputProps> = ({ rightIcon, leftIcon, ico
           style={{ padding: 5, marginLeft: 10 }}
         />
       )}
-      <InputContainer
-        {...rest}
-        placeholderTextColor={COLORS.GRAY4}
-      />
+      <InputContainer {...rest} placeholderTextColor={COLORS.GRAY4} />
       {rightIcon && (
         <Ionicons
           name={iconName}
@@ -41,4 +45,4 @@ const Input: React.FC<InputProps & TextInputProps> = ({ rightIcon, leftIcon, ico
   );
 };
 
-export { Input } ;
+export { Input };

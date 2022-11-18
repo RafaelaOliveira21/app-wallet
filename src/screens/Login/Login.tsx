@@ -41,9 +41,9 @@ const Login: React.FC = () => {
             leftIcon
             iconSize={24}
             iconName="lock-closed-outline"
-            placeholder='Digite sua senha'
+            placeholder="Digite sua senha"
           />
-          <Button title='Entrar' />
+          <Button title="Entrar" onPress={() => {}} />
         </ContentBody>
         <ContentFooter></ContentFooter>
       </Container>
